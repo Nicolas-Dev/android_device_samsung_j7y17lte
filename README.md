@@ -13,11 +13,11 @@ Copyright (C) 2017 Valera Chigir <valera1978@tut.by>
 
 * Description
 
-  This repository is for LineageOS on Samsung Galaxy Tab A (gtaxllte)
+  Ce référentiel est pour LineageOS sur Samsung Galaxy Tab A (gtaxllte)
 
-* How To Build LineageOS for Samsung Galaxy Tab A
+* Comment construire LineageOS pour Samsung Galaxy Tab A
 
-  - Make a workspace
+  - Faire un espace de travail
 
 mkdir cm14
 cd cm14
@@ -26,7 +26,7 @@ cd cm14
 
 repo init -u git://github.com/LineageOS/android.git -b cm-14.1
 
-  - Create .repo/local_manifests/roomservice.xml with the following content:
+Créer  -  .repo/local_manifests/roomservice.xml with the following content:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -45,13 +45,13 @@ repo init -u git://github.com/LineageOS/android.git -b cm-14.1
 
 repo sync
 
-  - Copy proprietary vendor files
+  - Copier les fichiers propriétaires du fournisseur
 
-  There are two options to to that. Connect your device with adb enabled and run:
+Il y a deux options à cela. Connectez votre appareil avec adb activé et exécutez:
 
 ./extract-files.sh
 
-  Or if you have the system image unpacked on your disk, then simply run:
+Ou si vous avez décompressé l'image du système sur votre disque, lancez simplement:
 
     STOCK_ROM_DIR=/path/to/system ./extract-files.sh
 
