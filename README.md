@@ -14,7 +14,8 @@
 
 repo init -u git://github.com/LineageOS/android.git -b cm-14.1
 
-Créer  -  .repo/local_manifests/roomservice.xml with the following content:
+Créer  -  .repo/local_manifests/roomservice.xml avec le contenu suivant:
+
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
