@@ -1,28 +1,24 @@
-Device configuration for the Samsung Galaxy Tab A
-
-Copyright (C) 2017 The LineageOS Project
-Copyright (C) 2017 Valera Chigir <valera1978@tut.by>
-
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
-------------------------------------------------------------------
-
-* Description
-
-  Ce référentiel est pour LineageOS sur Samsung Galaxy Tab A (gtaxllte)
-
-* Comment construire LineageOS pour Samsung Galaxy Tab A
-
-  - Faire un espace de travail
-
-mkdir cm14
-cd cm14
-
-  - Do repo init & sync
+---------------------------------------------
+/           ***** Status *****              /
+---------------------------------------------
+/         *****ROM boot: oui*****           /
+---------------------------------------------
+/           *****Audio: oui *****           /
+---------------------------------------------
+/           ***** GPS: oui *****            /
+---------------------------------------------
+/          *****Capteurs: oui *****         /
+---------------------------------------------
+/         ***** Lumières: oui *****         /
+---------------------------------------------
+/           ***** RIL: oui *****            /
+---------------------------------------------
+/      ***** données mobile: oui *****      /
+---------------------------------------------
+/  ***** Audio en cours d'appel: oui *****  /
+---------------------------------------------
+/ *****  Camera: fonctione a moitier *****  /
+---------------------------------------------
 
 repo init -u git://github.com/LineageOS/android.git -b cm-14.1
 
@@ -42,23 +38,3 @@ Créer  -  .repo/local_manifests/roomservice.xml with the following content:
   <project name="LineageOS/android_hardware_samsung_slsi-cm_openmax" path="hardware/samsung_slsi-cm/openmax" remote="github" />
 </manifest>
 ```
-
-repo sync
-
-  - Copier les fichiers propriétaires du fournisseur
-
-Il y a deux options à cela. Connectez votre appareil avec adb activé et exécutez:
-
-./extract-files.sh
-
-Ou si vous avez décompressé l'image du système sur votre disque, lancez simplement:
-
-    STOCK_ROM_DIR=/path/to/system ./extract-files.sh
-
-  - Setup environment
-
-. build/envsetup.sh
-
-  - Build cm14
-
-brunch gtaxllte
